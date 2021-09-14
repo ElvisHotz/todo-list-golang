@@ -18,3 +18,5 @@ TODO List with server api http golang and client web Angular
 - init web client angular
 - add .gitignore
 
+# 1.5.0
+- add angular material
