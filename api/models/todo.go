@@ -17,3 +17,21 @@ type Todos struct {
 func (t *Todos) TableName() string {
 	return "todos"
 }
+
+func (t *Todos) BeforeCreate(db *gorm.DB) (err error) {
+	if t.Finished {
+		t.DateForFinished = time.Now()
+	} else {
+		t.DateForFinished = time.Time{}
+	}
+	return
+}
+
+func (t *Todos) BeforeUpdate(db *gorm.DB) (err error) {
+	if t.Finished {
+		t.DateForFinished = time.Now()
+	} else {
+		t.DateForFinished = time.Time{}
+	}
+	return
+}
