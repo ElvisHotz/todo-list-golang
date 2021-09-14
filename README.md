@@ -13,3 +13,8 @@ TODO List with server api http golang and client web Angular
 # 1.3.0
 
 - add repository an services
+
+# 1.4.0
+- init web client angular
+- add .gitignore
+
